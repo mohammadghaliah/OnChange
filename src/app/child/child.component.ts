@@ -21,7 +21,8 @@ export class ChildComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     //it works whenever the value given to subcription parameter in the parent changes
     if (changes.number) {
-      console.log('s', this.number);
+      console.log('changes', changes);
+      console.log('number', this.number);
     }
   }
 }
