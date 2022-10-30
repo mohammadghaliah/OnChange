@@ -12,7 +12,7 @@ import {
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent implements OnInit {
-  @Input('number') number: any;
+  @Input('title') title: any;
 
   constructor() {}
 
@@ -20,9 +20,9 @@ export class ChildComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     //it works whenever the value given to subcription parameter in the parent changes
-    if (changes.number) {
+    if (changes.title) {
       console.log('changes', changes);
-      console.log('number', this.number);
+      console.log('number', this.title);
     }
   }
 }
